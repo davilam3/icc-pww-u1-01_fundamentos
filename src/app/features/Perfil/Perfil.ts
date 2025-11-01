@@ -27,7 +27,7 @@ export class Perfil {
   }
 
   resetData() {
-    this.name.set('Dianita');
+    this.name.set('Diana');
     this.lastName.set('Avila');
     this.age.set(20);
   }
