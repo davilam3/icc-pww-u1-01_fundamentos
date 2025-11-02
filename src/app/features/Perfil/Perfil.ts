@@ -13,17 +13,17 @@ export class Perfil {
   age= signal(20);
 
   getFullName(): string {
-    return `${this.name()} ${this.lastName()} con edad ${this.age()} años`;
+    return `${this.name()} ${this.lastName()} con ${this.age()} años`;
   }
 
   changeData(){
-    this.name.set('Carolina');
-    this.lastName.set('Macas');
-    this.age.set(18);
+    this.name.set('Ana');
+    this.lastName.set('Gonzales');
+    this.age.set(25);
   }
 
   changeAge(){
-    this.age.set(19);
+    this.age.set(18);
   }
 
   resetData() {

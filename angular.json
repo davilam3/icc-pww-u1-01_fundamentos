@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "baseHref": "https://github.com/davilam3/icc-pww-u1-01_fundamentos",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
