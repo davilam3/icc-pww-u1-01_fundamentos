@@ -27,6 +27,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "https://github.com/davilam3/icc-pww-u1-01_fundamentos.git",
               "budgets": [
                 {
                   "type": "initial",
