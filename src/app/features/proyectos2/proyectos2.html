@@ -1,1 +1,13 @@
-<p>proyectos2 works!</p>,
+<listado-proyectos
+    listName="Listado de Proyectos desde Servicio "
+    [proyectos]="proyectosService.proyectos()">
+</listado-proyectos>
+
+<add-proyecto   
+    (newProyecto)="proyectosService.addProyecto($event)"
+    (removeProyecto)="proyectosService.dellFirstProyecto(1)"
+></add-proyecto>
+
+<!-- evento se ejecutara cuando 
+ mit el newproyecto con el output
+ y se ejecutara cuando emit  -->

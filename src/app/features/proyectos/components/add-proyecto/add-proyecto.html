@@ -20,21 +20,8 @@
         >
 
         <button (click)="addProyecto()">Agregar</button>
+        <button (click)="dellFirstProyecto(1)">Eliminar</button>
 
     </div>
-    <div>
-        <div>
-        <h3>Listado</h3>
-         <ul>
-            @for(proyecto of proyectos(); track $index){
-            <li>{{proyecto.nombre}} - {{proyecto.descripcion}}</li>
-        }
-        </ul> 
-        </div>
-    </div>
 
-    <listado-proyectos listName="Listado de Proyectos " 
-    [proyectos]="proyectos()">
-    </listado-proyectos>
-    
 </section>
