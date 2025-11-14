@@ -1,0 +1,86 @@
+<h1>Formulario Reactivo</h1>
+<!-- FORMA SIMPLE <form [formGroup]="myForm">
+    <input formControlName="nombre" 
+        placeholder="Nombre">
+    <input formControlEdad="edad"
+        placeholder="Edad">
+    <input formControlName="email" 
+        placeholder="Email">
+</form> -->
+
+<div class="row">
+    <div class="col">
+        <form
+            autocomplete="off"
+            [formGroup]="myForm"  
+            (ngSubmit)="onSubmit()"
+        > 
+        <!-- el input es reactivo con form control-->
+         <!-- Campo: Nombre -->
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nombre</label>
+            <div class="col-sm-9">
+                <input type="text"
+                class="form-control"
+                placeholder="Nombre del usuario"
+                formControlName="nombre"
+                >
+                @if (formUtils.isValidField(myForm, 'nombre')) {
+                    <span class="form-text text-danger">
+                        {{ formUtils.getFieldError(myForm, 'nombre') }}
+                    </span>
+                }
+            </div>
+          </div>
+            <!-- Campo: Edad -->
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Edad</label>
+            <div class="col-sm-9">
+                <input type="number"
+                class="form-control"
+                placeholder="Edad del usuario"
+                formControlName="edad"
+                >
+                <!-- @if(isValidField('edad')) {
+                    <p>{{ getFieldError('edad') }}</p>
+                }    -->
+                 @if (formUtils.isValidField(myForm, 'edad')) {
+                    <span class="form-text text-danger">
+                        {{ formUtils.getFieldError(myForm, 'edad') }}
+                    </span>
+                }
+            </div>
+        </div>
+            <!-- Campo: Email -->
+        <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-9">
+                <input type="email"
+                class="form-control"
+                placeholder="Correo Electronico"
+                formControlName="email"
+                >
+                <!-- @if (isValidField('email')) {
+                    <p>{{ getFieldError('email') }}</p>
+                } -->
+             @if (formUtils.isValidField(myForm, 'email')) {
+                    <span class="form-text text-danger">
+                        {{ formUtils.getFieldError(myForm, 'email') }}
+                    </span>
+                }        
+            </div>
+        </div>
+
+            <!-- TODOS LOS BOTENES DENTRO DEL FORMULARIO ACTIVE EL ONSUBIMIT, el guardar agg entre corchetes es JS -->
+            <div class="row">
+                <div class="col">
+                    <button
+                        type="submit"
+                        class="btn btn-primary float-end"
+                        >Guardar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

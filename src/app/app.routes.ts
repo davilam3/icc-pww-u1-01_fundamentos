@@ -4,6 +4,7 @@ import { Homepage } from './features/homepage/homepage';
 import { Perfil } from './features/Perfil/Perfil';
 import { Proyectos } from './features/proyectos/proyectos';
 import { Proyectos2 } from './features/proyectos2/proyectos2';
+import { Formulario } from './features/formulario/formulario';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,10 @@ export const routes: Routes = [
     {
         path: 'proyectos2',
         component: Proyectos2,
+    },
+    {
+        path: 'formulario',
+        component: Formulario,
     }
     
 
