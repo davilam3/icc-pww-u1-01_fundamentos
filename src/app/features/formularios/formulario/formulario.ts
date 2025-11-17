@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { Form, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Validator } from '@angular/forms';
-import { formUtils } from '../../Utils/formUtils';
+import { formUtils } from '../../../Utils/formUtils';
 
 @Component({
   selector: 'app-formulario',

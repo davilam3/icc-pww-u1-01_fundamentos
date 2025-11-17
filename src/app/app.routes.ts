@@ -4,7 +4,6 @@ import { Homepage } from './features/homepage/homepage';
 import { Perfil } from './features/Perfil/Perfil';
 import { Proyectos } from './features/proyectos/proyectos';
 import { Proyectos2 } from './features/proyectos2/proyectos2';
-import { Formulario } from './features/formulario/formulario';
 
 export const routes: Routes = [
     {
@@ -28,7 +27,12 @@ export const routes: Routes = [
     },
     {
         path: 'formulario',
-        component: Formulario,
+        //component: Formulario,
+        loadChildren: () => import('./features/formularios/formularios-routes').then(m => m.formulariosRoutes)
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
     
 
